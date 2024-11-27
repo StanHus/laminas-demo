@@ -25,4 +25,12 @@ class ProductTable
         $rowset = $this->tableGateway->select(['id' => (int) $id]);
         return $rowset->current();
     }
+
+    public function updatePaymentStatus($id, $status)
+    {
+        $this->tableGateway->update(
+            ['payment_status' => $status], // Update the status
+            ['id' => (int) $id]            // Where condition
+        );
+    }
 }

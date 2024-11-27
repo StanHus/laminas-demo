@@ -4,6 +4,14 @@ declare(strict_types=1);
 
 use Laminas\Mvc\Application;
 
+// // Load .env file
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+// $dotenv->load();
+
+// $dotenv->required([
+//     'STRIPE_SECRET_KEY',
+// ]);
+
 /**
  * This makes our life easier when dealing with paths. Everything is relative
  * to the application root now.
