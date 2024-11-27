@@ -1,0 +1,12 @@
+<h1>Checkout</h1>
+
+<p>
+    <strong>Product:</strong> <?= $this->escapeHtml($product->name) ?><br>
+    <strong>Price:</strong> $<?= $this->escapeHtml($product->price) ?><br>
+    <strong>Description:</strong> <?= $this->escapeHtml($product->description) ?><br>
+</p>
+
+<form action="/payment/process-payment" method="post">
+    <input type="hidden" name="product_id" value="<?= $product->id ?>">
+    <button type="submit">Pay Now</button>
+</form>
